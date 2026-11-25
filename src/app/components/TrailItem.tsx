@@ -7,6 +7,7 @@ interface TrailItemProps {
   isCompleted: boolean;
   onToggle: (itemId: string) => void;
   onOpenContent: (item: TrailItemType) => void;
+  readOnly?: boolean;
 }
 
 const typeIcons = {
@@ -30,7 +31,7 @@ const typeBgColors = {
   tutorial: 'bg-amber-50',
 };
 
-export function TrailItem({ item, isCompleted, onToggle, onOpenContent }: TrailItemProps) {
+export function TrailItem({ item, isCompleted, onToggle, onOpenContent, readOnly = false }: TrailItemProps) {
   const Icon = typeIcons[item.type];
   const colorClass = typeColors[item.type];
   const bgColorClass = typeBgColors[item.type];
@@ -52,6 +53,7 @@ export function TrailItem({ item, isCompleted, onToggle, onOpenContent }: TrailI
           <Checkbox
             id={item.id}
             checked={isCompleted}
+            disabled={readOnly}
             onCheckedChange={() => onToggle(item.id)}
             className="h-5 w-5"
           />

@@ -33,7 +33,16 @@ export function Dashboard() {
   }
 
   const allItems = [...companyTrail.items, ...teamTrail.items];
-  const completedCount = completedItems.length;
+  const allItemIds = new Set(allItems.map(item => item.id));
+  // Só conta itens das trilhas do próprio usuário (evita passar de 100%)
+  const completedCount = completedItems.filter(id => allItemIds.has(id)).length;
+
+  // Admins veem as trilhas de todos os times (as de outros times ficam em modo leitura)
+  const teamNames = Object.keys(teamTrails);
+  const adminTeamTabs = [
+    userProgress.team,
+    ...teamNames.filter(name => name !== userProgress.team),
+  ];
   const totalProgress = calculateProgress(allItems.length, completedCount);
 
   const handleToggleItem = (itemId: string) => {
@@ -167,13 +176,25 @@ export function Dashboard() {
 
         {/* Trails */}
         <Tabs defaultValue="company" className="space-y-6">
-          <TabsList className="bg-gray-100 border border-gray-300 p-1">
+          <TabsList className={`bg-gray-100 border border-gray-300 p-1 ${showAdmin ? 'flex-wrap h-auto' : ''}`}>
             <TabsTrigger value="company" className="flex-1 data-[state=active]:bg-orange-500 data-[state=active]:text-white">
               Trilha da Empresa
             </TabsTrigger>
-            <TabsTrigger value="team" className="flex-1 data-[state=active]:bg-orange-500 data-[state=active]:text-white">
-              Trilha de {userProgress.team}
-            </TabsTrigger>
+            {showAdmin ? (
+              adminTeamTabs.map(name => (
+                <TabsTrigger
+                  key={name}
+                  value={`team:${name}`}
+                  className="flex-1 data-[state=active]:bg-orange-500 data-[state=active]:text-white"
+                >
+                  Trilha de {name}
+                </TabsTrigger>
+              ))
+            ) : (
+              <TabsTrigger value="team" className="flex-1 data-[state=active]:bg-orange-500 data-[state=active]:text-white">
+                Trilha de {userProgress.team}
+              </TabsTrigger>
+            )}
           </TabsList>
 
           <TabsContent value="company" className="mt-6">
@@ -185,14 +206,36 @@ export function Dashboard() {
             />
           </TabsContent>
 
-          <TabsContent value="team" className="mt-6">
-            <TrailSection
-              trail={teamTrail}
-              completedItems={completedItems}
-              onToggleItem={handleToggleItem}
-              onOpenContent={openModal}
-            />
-          </TabsContent>
+          {showAdmin ? (
+            adminTeamTabs.map(name => {
+              const isOwnTeam = name === userProgress.team;
+              return (
+                <TabsContent key={name} value={`team:${name}`} className="mt-6">
+                  {!isOwnTeam && (
+                    <div className="mb-4 rounded-lg border border-orange-200 bg-orange-50 px-4 py-3 text-sm text-orange-800">
+                      Visualização de admin: você pode abrir os conteúdos desta trilha, mas a marcação de progresso fica desativada para trilhas de outros times.
+                    </div>
+                  )}
+                  <TrailSection
+                    trail={teamTrails[name]}
+                    completedItems={completedItems}
+                    onToggleItem={handleToggleItem}
+                    onOpenContent={openModal}
+                    readOnly={!isOwnTeam}
+                  />
+                </TabsContent>
+              );
+            })
+          ) : (
+            <TabsContent value="team" className="mt-6">
+              <TrailSection
+                trail={teamTrail}
+                completedItems={completedItems}
+                onToggleItem={handleToggleItem}
+                onOpenContent={openModal}
+              />
+            </TabsContent>
+          )}
         </Tabs>
 
         {totalProgress === 100 && (

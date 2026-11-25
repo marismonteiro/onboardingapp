@@ -8,9 +8,10 @@ interface TrailSectionProps {
   completedItems: string[];
   onToggleItem: (itemId: string) => void;
   onOpenContent: (item: TrailItemType) => void;
+  readOnly?: boolean;
 }
 
-export function TrailSection({ trail, completedItems, onToggleItem, onOpenContent }: TrailSectionProps) {
+export function TrailSection({ trail, completedItems, onToggleItem, onOpenContent, readOnly = false }: TrailSectionProps) {
   const completedCount = trail.items.filter(item => 
     completedItems.includes(item.id)
   ).length;
@@ -42,6 +43,7 @@ export function TrailSection({ trail, completedItems, onToggleItem, onOpenConten
             isCompleted={completedItems.includes(item.id)}
             onToggle={onToggleItem}
             onOpenContent={onOpenContent}
+            readOnly={readOnly}
           />
         ))}
       </div>
