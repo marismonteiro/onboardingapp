@@ -2805,61 +2805,107 @@ Assista ao treinamento: [Como funciona a postagem de um projeto](https://app.sal
       },
       {
         id: 'cs-6',
-        title: 'Reuniões do Projeto: Conexão e Atualização',
-        description: 'Quando e como acontecem as reuniões de conexão e de atualização com o cliente',
+        title: 'Reuniões do Projeto: Conexão, Atualização e Apresentação',
+        description: 'Reuniões de conexão, de atualização com o cliente e de apresentação de projeto ao solver',
         type: 'reading',
         duration: '15 min',
         content: `## Reunião de conexão
 
 Reuniões de conexão ocorrem principalmente em projetos de co-manufatura, após a assinatura do NDA. É o momento em que cliente e solver se conhecem diretamente para aprofundar o alinhamento técnico e comercial.
 
-[O que é uma reunião de conexão?](https://app.salesbud.com.br/s/0c2efc478a127140e8abed3c542624dad58455f0c67ee556ec697a3741caf72e)
+- [O que é uma reunião de conexão?](https://app.salesbud.com.br/s/0c2efc478a127140e8abed3c542624dad58455f0c67ee556ec697a3741caf72e)
+- [Exemplo de reunião de conexão](https://app.salesbud.com.br/s/57889257977ca22dfcd40d2d966a6eb4e67df4a06024930ec4c60d9ab0d3536e)
 
 ## Reuniões de atualização
 
-Reuniões de atualização ocorrem de forma semanal ou quinzenal entre o time e o cliente, para compartilhar updates do projeto e um overview do que foi encontrado até o momento.
+Reuniões de atualização ocorrem de forma semanal ou quinzenal entre o PM e o cliente, para compartilhar updates do projeto e um overview do que foi encontrado até o momento.
 
-[Como funcionam as reuniões de atualização de um projeto?](https://app.salesbud.com.br/s/363cbc75436defa6a026d2639b985a480bfe2e4fb81b934628c2b44c5df6534a)`,
+- [Exemplo de reunião de atualização 1](https://app.salesbud.com.br/s/1425de51dbec7ec2fe5048cdf2042cf8ab28b00df7ec90e9e4fb0e2da9e23d1b)
+- [Exemplo de reunião de atualização 2](https://app.salesbud.com.br/s/ff60a78e0eb4af52f5010e1701147acdfa27363dc2b8170c183e407ccb1a351c)
+
+## Reuniões de apresentação de projeto ao solver
+
+Reuniões de apresentação são o primeiro contato que o solver (fornecedor/terceirizador) tem com a GrowinCo. Nela apresentamos nossa forma de trabalho e detalhes do projeto.
+
+- [Exemplo de reunião de apresentação 1](https://app.salesbud.com.br/s/17a884472cd566dfccf8d14592798fd34ac952892f598c35974c8e85194e68fe)
+- [Exemplo de reunião de apresentação 2](https://app.salesbud.com.br/s/d540680e32059a0ddf18bfd8112068a5a6d332217a6b3b40b24b6e173fe945bd)
+- [Exemplo de reunião de apresentação 3](https://app.salesbud.com.br/s/b892cb9fc6331ae2d3a16f0931e56cf2eacabd4b6142675983a22046cbf191e2)
+- [Exemplo de reunião de apresentação 4](https://app.salesbud.com.br/s/00aca94cb9f0015a5db94e2a19e6716471e4322845626ff07ab7683782ee3ce1)
+- [Exemplo de reunião de apresentação 5](https://app.salesbud.com.br/s/d38a70a7cabeba6d22eeae40a1a6f9bc06e051c92c447171f998ec3b4c3f35f7)`,
       },
       {
-        id: 'cs-7',
-        title: 'Onboarding: HubSpot',
-        description: 'Sessão com Leo ou Enzo sobre o uso do HubSpot',
-        type: 'meeting',
-        duration: '45 min',
-        content: `Agende esta sessão com **Leo** ou **Enzo** durante as primeiras semanas de onboarding para aprender a usar o HubSpot no dia a dia.`,
+        id: 'cs-19',
+        title: 'Ferramentas: My Network',
+        description: 'Treinamento sobre a ferramenta My Network',
+        type: 'tutorial',
+        duration: '15 min',
+        content: `Acesse o material sobre a ferramenta **My Network**:
+
+- [My Network](https://app.salesbud.com.br/s/83ac61578c5862066d1fa8d9c50bfb493e9d227cfd859e348b981a48835de4e8)`,
       },
       {
-        id: 'cs-8',
-        title: 'Onboarding: Apollo e LinkedIn Sales Navigator',
-        description: 'Sessão com Amanda sobre prospecção e mapeamento de solvers',
+        id: 'cs-14',
+        title: 'Tour pela Plataforma',
+        description: 'Sessão com Amanda',
         type: 'meeting',
         duration: '45 min',
-        content: `Agende esta sessão com **Amanda** durante as primeiras semanas de onboarding para aprender a usar o Apollo e o LinkedIn Sales Navigator.`,
+        content: `Agende esta sessão com **Amanda** para fazer o tour pela plataforma.`,
       },
       {
-        id: 'cs-9',
-        title: 'Onboarding: Mintel e Latam Food Explorer',
-        description: 'Sessão com Karol sobre ferramentas de pesquisa de mercado',
+        id: 'cs-15',
+        title: 'Fluxo de Projetos',
+        description: 'Sessão com Amanda',
         type: 'meeting',
         duration: '45 min',
-        content: `Agende esta sessão com **Karol** durante as primeiras semanas de onboarding para aprender a usar o Mintel e o Latam Food Explorer.`,
+        content: `Agende esta sessão com **Amanda** para entender o fluxo de projetos.`,
       },
       {
-        id: 'cs-10',
-        title: 'Onboarding: Go-To-Market (GTM)',
-        description: 'Sessão com Pedro sobre o processo de Go-To-Market',
+        id: 'cs-16',
+        title: 'Ferramentas de Contato: Apollo, LinkedIn e HubSpot',
+        description: 'Sessão com Ariadne',
         type: 'meeting',
         duration: '45 min',
-        content: `Agende esta sessão com **Pedro** durante as primeiras semanas de onboarding para entender o processo de Go-To-Market (GTM).`,
+        content: `Agende esta sessão com **Ariadne** para aprender a usar as ferramentas de contato: Apollo, LinkedIn e HubSpot.`,
       },
       {
         id: 'cs-11',
-        title: 'Onboarding: Success Fee (SF)',
-        description: 'Sessão com Karol sobre Success Fee',
+        title: 'Success Fee (SF)',
+        description: 'Sessão com Mari S.',
         type: 'meeting',
         duration: '45 min',
-        content: `Agende esta sessão com **Karol** durante as primeiras semanas de onboarding para entender o Success Fee (SF).`,
+        content: `Agende esta sessão com **Mari S.** para entender o Success Fee (SF).`,
+      },
+      {
+        id: 'cs-10',
+        title: 'Oportunidades de Go-To-Market e Seekers em Projetos',
+        description: 'Sessão com Pedro',
+        type: 'meeting',
+        duration: '45 min',
+        content: `Agende esta sessão com **Pedro** para aprender como identificar oportunidades de Go-To-Market e seekers em projetos.`,
+      },
+      {
+        id: 'cs-17',
+        title: 'Onboarding Ingredientes',
+        description: 'Sessão com Enzo',
+        type: 'meeting',
+        duration: '45 min',
+        content: `Agende com **Enzo** a sessão de onboarding de ingredientes.`,
+      },
+      {
+        id: 'cs-18',
+        title: 'Handover Ajinomoto',
+        description: 'Sessão com Enzo e Karol',
+        type: 'meeting',
+        duration: '45 min',
+        content: `Agende com **Enzo** e **Karol** a sessão de handover da Ajinomoto.`,
+      },
+      {
+        id: 'cs-9',
+        title: 'Latam Food Explorer, Mintel e Penta',
+        description: 'Sessão com Leo',
+        type: 'meeting',
+        duration: '45 min',
+        content: `Agende esta sessão com **Leo** para aprender a usar o Latam Food Explorer, o Mintel e o Penta.`,
       },
       {
         id: 'cs-12',
